@@ -97,23 +97,27 @@ class App extends Component {
             <div className="app">
                 <AppInfo 
                     number={this.state.data.length}
-                    onIncrease={this.state.data.filter(elem => elem.increase === true)}/>
+                    onIncrease={this.state.data.filter(elem => elem.increase === true)}
+                />
     
                 <div className="search-panel">
                     <SearchPanel
-                    onUpdateSearch={this.onUpdateSearch}/>
+                        onUpdateSearch={this.onUpdateSearch}
+                    />
                     <AppFilter
-                    filter={filter}
-                    onFilterSelect={this.onFilterSelect}/>
+                        filter={filter}
+                        onFilterSelect={this.onFilterSelect}
+                    />
                 </div>
     
                 <EmployeesList 
                     data={visibleData}
                     onDelete={this.deleteItem}
-                    onToggleProp={this.onToggleProp}/>
+                    onToggleProp={this.onToggleProp}
+                />
                 <EmployeesAddForm 
                     onCreate={this.addItem}
-                    />
+                />
             </div>
         );
     }
